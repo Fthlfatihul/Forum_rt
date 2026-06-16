@@ -1,0 +1,204 @@
+/* Netralkan setelan body default agar tidak flex horizontal */
+body.halaman-login-total {
+    margin: 0;
+    padding: 0;
+    display: block !important; /* Mematikan flex global jika ada */
+    background-color: #f8fafc;
+    width: 100%;
+}
+
+/* Memaksa semua komponen berbaris tegak lurus ke bawah */
+.wrapper-vertikal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.blok-navbar, .blok-hero, .blok-footer {
+    display: block;
+    width: 100%;
+}
+
+/* Area pembungkus form login */
+.blok-konten-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tombol Kembali */
+.back-button-container {
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.btn-kembali {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Kartu Login Utama */
+.login-card {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+/* Sektor Header Biru pada Kartu */
+.card-header {
+    background-color: #1d4ed8;
+    color: #ffffff;
+    padding: 30px 25px;
+}
+
+.card-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+
+.card-header p {
+    font-size: 13px;
+    color: #bfdbfe;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Form Body */
+.card-body {
+    padding: 25px 25px 15px 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 8px;
+}
+
+.input-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+.input-icon-wrapper input {
+    width: 100%;
+    padding: 12px 12px 12px 40px;
+    font-size: 14px;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    color: #334155;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-icon-wrapper input:focus {
+    background-color: #ffffff;
+    border-color: #1d4ed8;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    color: #94a3b8;
+    cursor: pointer;
+}
+
+.btn-masuk-submit {
+    width: 100%;
+    background-color: #1d4ed8;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Footer Kartu */
+.card-footer {
+    padding: 0 25px 25px 25px;
+}
+
+.register-text {
+    text-align: center;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.register-text a {
+    color: #1d4ed8;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.info-box {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 12px 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.info-box i {
+    color: #3b82f6;
+    font-size: 14px;
+}
+
+.info-box p {
+    font-size: 12px;
+    color: #1d4ed8;
+    line-height: 1.5;
+    margin: 0;
+}
+/* Styling Teks Copyright Simpel di Tengah Bawah */
+.blok-footer {
+    text-align: center;
+    padding: 20px 0 30px 0; /* Memberikan jarak atas dan bawah */
+    width: 100%;
+    margin-top: auto; /* Memaksa copyright menempel ke paling bawah halaman jika layar senggang */
+}
+
+.simple-copyright p {
+    font-size: 12px;
+    color: #94a3b8; /* Warna abu-abu soft/tipis */
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

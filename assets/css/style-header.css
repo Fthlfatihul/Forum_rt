@@ -1,0 +1,188 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+  margin: 0;
+}
+
+body {
+  background-color: #f3f4f6;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- Container Utama Banner --- */
+.hero-banner {
+  width: 100%;
+  max-width: 1200px;
+  background: linear-gradient(to right, #1d4ed8, #1e3a8a); /* Gradasi Biru */
+  background-image: 
+    radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px), 
+    linear-gradient(to right, #1d4ed8, #1e3a8a); /* Pola Titik-Titik + Gradasi */
+  background-size: 16px 16px, 100% 100%;
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Bagian Kiri (Konten) --- */
+.hero-content {
+  flex: 1;
+}
+
+/* Badges */
+.badge-container {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+}
+
+.badge-rt {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.badge-status {
+  background-color: #dc2626;
+}
+
+/* Judul & Deskripsi */
+.hero-title {
+  font-family: Georgia, serif; /* Menggunakan font serif agar mirip gambar */
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.hero-description {
+  color: #dbeafe;
+  font-size: 1rem;
+  max-width: 600px;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+/* Tombol */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  padding: 0.65rem 1.25rem;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn-danger {
+  background-color: #dc2626;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Bagian Kanan (Logo Bulat) --- */
+.hero-logo-wrapper {
+  flex-shrink: 0;
+}
+
+.logo-circle {
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.logo-text-top {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: #93c5fd;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.logo-main {
+  font-family: Georgia, serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.logo-divider {
+  width: 30px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 4px 0;
+}
+
+.logo-text-bottom {
+  font-size: 0.75rem;
+  color: #dbeafe;
+  font-weight: 500;
+}
+
+/* --- Responsive (Layar HP / Mobile) --- */
+@media (max-width: 768px) {
+  .hero-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+  
+  .badge-container, .hero-actions {
+    justify-content: center;
+  }
+  
+  .hero-title {
+    font-size: 1.75rem;
+  }
+  
+  .logo-circle {
+    width: 130px;
+    height: 130px;
+  }
+}
