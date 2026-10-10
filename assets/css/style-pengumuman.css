@@ -1,0 +1,159 @@
+/* ==========================================================================
+   1. GLOBAL RESET & BASE LAYOUT
+   ========================================================================== */
+body.halaman-pengumuman-total {
+    margin: 0;
+    padding: 0;
+    display: block !important;
+    background-color: #f8fafc;
+    width: 100%;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.wrapper-vertikal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.pengumuman-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+/* ==========================================================================
+   2. HEADER BLOCK
+   ========================================================================== */
+.pengumuman-header {
+    margin-bottom: 25px;
+}
+
+.pengumuman-header h2 {
+    font-size: 24px;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+}
+
+.pengumuman-header p {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+
+/* ==========================================================================
+   3. ACCORDION WRAPPER & ANIMATION COMPONENT
+   ========================================================================== */
+.accordion-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.accordion-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+}
+
+.accordion-title-bar {
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    transition: background-color 0.2s ease;
+}
+
+.accordion-title-bar:hover {
+    background-color: #f8fafc;
+}
+
+.title-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.title-meta h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.ann-date {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.arrow-icon {
+    color: #64748b;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+/* Content Area Expansion */
+.accordion-content {
+    display: none;
+    padding: 20px;
+    border-top: 1px solid #f1f5f9;
+    background-color: #ffffff;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.content-text {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.content-footer {
+    border-top: 1px solid #f8fafc;
+    padding-top: 12px;
+}
+
+.content-footer p {
+    margin: 0;
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+.content-footer strong {
+    color: #475569;
+}
+
+/* ==========================================================================
+   4. UTILITIES EMPTY STATE DARI DATA KOSONG
+   ========================================================================== */
+.pengumuman-empty-state {
+    text-align: center; 
+    padding: 40px; 
+    background: white; 
+    border-radius: 12px; 
+    border: 1px solid #e2e8f0; 
+    color: #64748b;
+}
+
+.pengumuman-empty-state .empty-icon {
+    font-size: 40px; 
+    margin-bottom: 15px; 
+    color: #cbd5e1;
+}
+
+.pengumuman-empty-state .empty-text {
+    margin: 0; 
+    font-weight: 600;
+}

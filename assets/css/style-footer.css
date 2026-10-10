@@ -1,15 +1,15 @@
-/* Container Utama Footer */
+
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
     padding: 20px 40px;
-    border-top: 1px solid #e2e8f0; /* Garis tipis di atas footer */
-    margin-top: 40px; /* Jarak dari konten di atasnya */
+    border-top: 1px solid #e2e8f0; 
+    margin-top: 40px;
 }
 
-/* Bagian Brand / Kiri */
+
 .footer-brand {
     display: flex;
     align-items: center;
@@ -42,14 +42,14 @@
     margin: 2px 0 0 0;
 }
 
-/* Bagian Hak Cipta / Kanan */
+
 .footer-copyright p {
     font-size: 13px;
     color: #64748b;
     margin: 0;
 }
 
-/* Responsif untuk Layar HP / Kecil */
+
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;

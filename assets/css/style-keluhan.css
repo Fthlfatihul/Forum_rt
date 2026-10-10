@@ -1,0 +1,409 @@
+/* ==========================================================================
+   1. GLOBAL RESET & BASE LAYOUT
+   ========================================================================== */
+body.halaman-keluhan-total {
+    margin: 0;
+    padding: 0;
+    display: block !important;
+    background-color: #f8fafc;
+    width: 100%;
+}
+
+.wrapper-vertikal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.keluhan-container {
+    max-width: 800px; 
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+/* ==========================================================================
+   2. TOP MAIN HEADER & TAB BUTTONS
+   ========================================================================== */
+.keluhan-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-titles h2 {
+    font-size: 24px;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+}
+
+.header-titles p {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+
+.toggle-view-buttons {
+    display: flex;
+    background-color: #e2e8f0;
+    padding: 4px;
+    border-radius: 10px;
+    gap: 4px;
+}
+
+.tab-btn {
+    border: none;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    background: none;
+    color: #64748b;
+    transition: all 0.2s;
+}
+
+.tab-btn.active {
+    background-color: #ffffff;
+    color: #1d4ed8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tab-btn.sub-accent {
+    color: #1d4ed8;
+}
+
+.tab-btn.sub-accent.active {
+    background-color: #1d4ed8;
+    color: white;
+}
+
+/* ==========================================================================
+   3. COMPLAINT LIST & CARD FEED STYLING
+   ========================================================================== */
+.complaint-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.01);
+}
+
+.card-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.meta-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.complaint-id {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1d4ed8;
+}
+
+/* Badges Status Pengondisian */
+.badge {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.badge-status.process { background-color: #fef9c3; color: #ca8a04; }
+.badge-status.success { background-color: #dcfce7; color: #16a34a; }
+.badge-status.waiting { background-color: #f1f5f9; color: #64748b; }
+
+.complaint-title {
+    font-size: 16px;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 0 0 6px 0;
+}
+
+.complaint-desc {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+
+.card-meta-footer {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: #94a3b8;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.rt-response-box {
+    background-color: #eff6ff;
+    border-radius: 8px;
+    padding: 12px 15px;
+    border-left: 4px solid #3b82f6;
+}
+
+.rt-response-box p {
+    font-size: 13px;
+    color: #1e40af;
+    margin: 0;
+}
+
+/* Action Trigger Edit Button */
+.action-buttons {
+    display: flex; 
+    gap: 8px;
+}
+
+.btn-edit-keluhan {
+    text-decoration: none; 
+    border: 1px solid #e2e8f0; 
+    padding: 6px 12px; 
+    font-size: 12px; 
+    border-radius: 6px; 
+    color: #ca8a04; 
+    font-weight: 500; 
+    background: #fef9c3;
+    transition: background 0.2s;
+}
+
+.btn-edit-keluhan:hover {
+    background: #fde047;
+}
+
+/* ==========================================================================
+   4. COMPLAINT FORM CARD BLOCKS
+   ========================================================================== */
+.form-section-hidden {
+    display: none;
+}
+
+.form-complaint-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.form-card-header {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 25px;
+}
+
+.form-card-header h3 {
+    font-size: 18px;
+    margin: 0 0 6px 0;
+    font-weight: 700;
+}
+
+.form-card-header p {
+    font-size: 13px;
+    color: #bfdbfe;
+    margin: 0;
+}
+
+.form-card-body {
+    padding: 25px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+.req { color: #ef4444; }
+
+.input-field, .input-field-area {
+    width: 100%;
+    padding: 11px 14px;
+    font-size: 14px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s;
+    font-family: inherit;
+    color: #334155;
+}
+
+.input-field:focus, .input-field-area:focus {
+    border-color: #1d4ed8;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.05);
+}
+
+/* Info Blue Box Alert */
+.info-blue-box {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 12px 15px;
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+}
+
+.info-blue-box i {
+    color: #3b82f6;
+    margin-top: 2px;
+}
+
+.info-blue-box p {
+    font-size: 13px;
+    color: #1e40af;
+    margin: 0;
+}
+
+/* ==========================================================================
+   5. AUTH & PROMPT UTILITIES (GUEST CONTENT)
+   ========================================================================== */
+.login-status-prompt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    min-height: 40vh;
+}
+
+.auth-message-box {
+    width: 100%;
+    max-width: 520px;
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+}
+
+.auth-message-box i {
+    color: #2563eb;
+    font-size: 32px;
+    margin-bottom: 14px;
+}
+
+.auth-message-box h3 {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    color: #1e40af;
+}
+
+.auth-message-box p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.6;
+}
+
+.btn-login-prompt {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #1d4ed8;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-login-prompt:hover {
+    background-color: #1e40af;
+}
+
+/* Empty State */
+.complaint-empty-state {
+    text-align: center; 
+    padding: 40px; 
+    color: #64748b; 
+    background: white; 
+    border-radius: 12px; 
+    border: 1px solid #e2e8f0;
+}
+
+.complaint-empty-state i {
+    font-size: 40px; 
+    margin-bottom: 10px; 
+    color: #cbd5e1;
+}
+
+.complaint-empty-state p {
+    margin: 0; 
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   6. ACTIONS EXECUTE CONTROL FOOTER
+   ========================================================================== */
+.form-actions-footer {
+    display: flex;
+    justify-content: flex-end; 
+    gap: 12px;
+}
+
+.btn-cancel-form {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #475569;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-cancel-form:hover {
+    background: #f8fafc;
+}
+
+.btn-submit-form {
+    background-color: #1d4ed8; 
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit-form:hover {
+    background-color: #1e40af;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE MEDIA QUERIES
+   ========================================================================== */
+@media (max-width: 768px) {
+    .keluhan-main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}

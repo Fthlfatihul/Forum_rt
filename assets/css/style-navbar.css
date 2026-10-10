@@ -75,9 +75,13 @@
 }
 
 /* Gaya khusus saat Menu Aktif (Beranda) */
-.nav-item.active {
-    background-color: #1d4ed8;
-    color: #ffffff;
+.navbar-container .nav-menu .nav-item.active {
+    background-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+.navbar-container .nav-menu .nav-item.active i {
+    color: #ffffff !important;
 }
 
 /* Efek Hover untuk menu non-aktif */
@@ -103,4 +107,51 @@
 
 .btn-masuk:hover {
     background-color: #1e40af;
+}
+
+/* login */
+.nav-action {
+    display: flex;
+    align-items: center;
+}
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Jarak proporsional antara Nama dan Tombol Logout */
+}
+
+.user-name {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Jarak rapat antara ikon user dan teks nama */
+    font-weight: 600;
+    font-size: 14px;
+    color: #334155; /* Warna teks abu gelap yang elegan */
+    background-color: #f8fafc; /* Box tipis di latar belakang nama */
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+.user-icon {
+    color: #64748b;
+    font-size: 16px;
+}
+
+.btn-logout {
+    text-decoration: none;
+    background-color: #ef4444; /* Merah Modern */
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+}
+.btn-logout:hover {
+    background-color: #dc2626; /* Merah agak gelap saat diarahkan kursor */
+    box-shadow: 0 4px 8px rgba(220, 38, 38, 0.3);
 }

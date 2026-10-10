@@ -4,25 +4,23 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-* {
-  margin: 0;
-}
 
-body {
-  background-color: #f3f4f6;
-  padding: 2rem;
+.header-section {
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
 }
 
-/* --- Container Utama Banner --- */
 .hero-banner {
   width: 100%;
   max-width: 1200px;
-  background: linear-gradient(to right, #1d4ed8, #1e3a8a); /* Gradasi Biru */
+  margin: 0 auto;
+  background: linear-gradient(to right, #1d4ed8, #1e3a8a);
   background-image: 
     radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px), 
-    linear-gradient(to right, #1d4ed8, #1e3a8a); /* Pola Titik-Titik + Gradasi */
+    linear-gradient(to right, #1d4ed8, #1e3a8a);
   background-size: 16px 16px, 100% 100%;
   border-radius: 16px;
   padding: 2.5rem;

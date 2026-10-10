@@ -1,0 +1,439 @@
+/* ==========================================================================
+   1. LAYOUT RESET & LAYOUT GLOBAL
+   ========================================================================== */
+body.halaman-diskusi-total {
+    margin: 0;
+    padding: 0;
+    display: block !important;
+    background-color: #f8fafc;
+    width: 100%;
+}
+
+.wrapper-vertikal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.forum-container {
+    max-width: 800px; 
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+/* ==========================================================================
+   2. FORUM TOP MAIN HEADER
+   ========================================================================== */
+.forum-main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.header-titles h2 {
+    font-size: 24px;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+}
+
+.header-titles p {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0;
+}
+
+.btn-buat-diskusi {
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-buat-diskusi:hover {
+    background-color: #1e40af;
+}
+
+/* ==========================================================================
+   3. FORM AREA: BUAT DISKUSI BARU & EDIT DISKUSI INLINE
+   ========================================================================== */
+.create-topic-card {
+    display: none; /* Dikontrol via JavaScript */
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+}
+
+.create-topic-card h3 {
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    color: #1e293b;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group-reset {
+    margin: 0;
+}
+
+.input-flat {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.input-flat:focus {
+    border-color: #1d4ed8;
+    background-color: #ffffff;
+}
+
+.form-actions-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* Edit Postingan Inline Form */
+.form-edit-post-inline {
+    display: none; 
+    flex-direction: column; 
+    gap: 10px; 
+    margin-bottom: 15px; 
+    background: #f8fafc; 
+    padding: 15px; 
+    border-radius: 8px; 
+    border: 1px solid #e2e8f0;
+}
+
+.input-edit-judul {
+    width: 100%; 
+    padding: 8px 12px; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.textarea-edit-isi {
+    width: 100%; 
+    padding: 8px 12px; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+.form-actions-edit {
+    display: flex; 
+    gap: 8px; 
+    justify-content: flex-end;
+}
+
+/* ==========================================================================
+   4. KARTU ITEM FEED DISKUSI
+   ========================================================================== */
+.discussion-card-item {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.01);
+    overflow: hidden;
+}
+
+.card-main-layout {
+    display: flex;
+    padding: 20px 25px;
+}
+
+.card-body-content {
+    flex: 1;
+}
+
+.topic-header-layout {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 15px;
+}
+
+.topic-title {
+    font-size: 16px;
+    color: #1e293b;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+}
+
+.topic-snippet {
+    font-size: 14px;
+    color: #475569;
+    line-height: 1.6;
+    margin: 10px 0 15px 0;
+}
+
+.topic-author-footer {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 12px;
+    color: #94a3b8;
+    flex-wrap: wrap;
+}
+
+/* Action Utilities Link (Edit & Hapus Topik) */
+.post-actions {
+    font-size: 13px; 
+    display: flex; 
+    gap: 12px; 
+    white-space: nowrap;
+}
+
+.btn-post-edit {
+    background: none; 
+    border: none; 
+    color: #ca8a04; 
+    cursor: pointer; 
+    font-weight: 600; 
+    padding: 0;
+}
+
+.btn-post-hapus {
+    color: #dc2626; 
+    text-decoration: none; 
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   5. KOMENTAR AREA (EXPANSION BLOCK & BUBBLES)
+   ========================================================================== */
+.btn-comment-trigger {
+    background: none;
+    border: none;
+    color: #1d4ed8;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0;
+    margin-left: auto;
+}
+
+.comments-expansion-block {
+    display: none;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.discussion-card-item.topic-expanded .comments-expansion-block {
+    display: block;
+}
+
+.comments-list-wrapper {
+    padding: 20px 25px 20px 85px;
+}
+
+.comment-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.comment-avatar {
+    width: 32px;
+    height: 32px;
+    background-color: #e2e8f0;
+    color: #64748b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.comment-bubble {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 12px 15px;
+    flex: 1;
+}
+
+.comment-meta {
+    font-size: 12px;
+    margin-bottom: 4px;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.comment-meta-user strong { color: #1e293b; }
+.comment-meta-user .comment-time { color: #94a3b8; margin-left: 8px; font-size: 11px; }
+
+.comment-body-text {
+    font-size: 13px;
+    color: #334155;
+    margin-top: 5px;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+/* Action Utilities Link di Komentar */
+.comment-actions {
+    font-size: 11px; 
+    display: flex; 
+    gap: 8px;
+}
+
+.btn-comment-edit {
+    background: none; 
+    border: none; 
+    color: #ca8a04; 
+    cursor: pointer; 
+    font-weight: 600;
+    padding: 0;
+}
+
+.btn-comment-hapus {
+    color: #dc2626; 
+    text-decoration: none; 
+    font-weight: 600;
+}
+
+/* Edit Komentar Inline Form */
+.form-edit-comment-inline {
+    display: none; 
+    margin-top: 8px;
+    gap: 6px;
+}
+
+.input-edit-comment {
+    width: 80%; 
+    padding: 6px 10px; 
+    border: 1px solid #cbd5e1; 
+    border-radius: 6px; 
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   6. INTERACTION CONTROL BUTTONS
+   ========================================================================== */
+.btn-batal, .btn-edit-batal, .btn-comment-cancel {
+    background: white;
+    border: 1px solid #cbd5e1;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #64748b;
+}
+
+.btn-posting, .btn-edit-simpan, .btn-comment-save, .btn-send-comment {
+    background-color: #1d4ed8;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-batal:hover, .btn-edit-batal:hover, .btn-comment-cancel:hover { background-color: #f8fafc; }
+.btn-posting:hover, .btn-edit-simpan:hover, .btn-comment-save:hover, .btn-send-comment:hover { background-color: #1e40af; }
+
+/* Input Box Komentar Baru di Bagian Bawah */
+.comment-input-form-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.comment-field-box {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 13px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+/* Utilities Info Kosong */
+.no-comment-text {
+    font-size: 13px; 
+    color: #94a3b8; 
+    text-align: center; 
+    margin-bottom: 15px;
+}
+
+.forum-empty-state {
+    text-align: center; 
+    padding: 40px; 
+    color: #64748b; 
+    background: white; 
+    border-radius: 12px; 
+    border: 1px solid #e2e8f0;
+}
+
+.forum-empty-state i {
+    font-size: 40px; 
+    margin-bottom: 10px; 
+    color: #cbd5e1;
+}
+
+.forum-empty-state p {
+    margin: 0; 
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   7. RESPONSIVE DESIGN (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 576px) {
+    .btn-comment-trigger {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 5px;
+    }
+    .comments-list-wrapper {
+        padding: 15px;
+    }
+    .input-edit-comment {
+        width: 100%;
+    }
+    .form-edit-comment-inline {
+        flex-direction: column;
+    }
+}

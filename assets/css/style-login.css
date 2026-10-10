@@ -28,25 +28,8 @@ body.halaman-login-total {
     justify-content: center;
     padding: 50px 20px;
     width: 100%;
+    min-height: 76vh;
     box-sizing: border-box;
-}
-
-/* Tombol Kembali */
-.back-button-container {
-    width: 100%;
-    max-width: 450px;
-    margin-bottom: 15px;
-    text-align: left;
-}
-
-.btn-kembali {
-    text-decoration: none;
-    color: #64748b;
-    font-size: 14px;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
 }
 
 /* Kartu Login Utama */
@@ -168,26 +151,6 @@ body.halaman-login-total {
     font-weight: 600;
 }
 
-.info-box {
-    background-color: #eff6ff;
-    border: 1px solid #bfdbfe;
-    border-radius: 8px;
-    padding: 12px 15px;
-    display: flex;
-    gap: 10px;
-}
-
-.info-box i {
-    color: #3b82f6;
-    font-size: 14px;
-}
-
-.info-box p {
-    font-size: 12px;
-    color: #1d4ed8;
-    line-height: 1.5;
-    margin: 0;
-}
 /* Styling Teks Copyright Simpel di Tengah Bawah */
 .blok-footer {
     text-align: center;

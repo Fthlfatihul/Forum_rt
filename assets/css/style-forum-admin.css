@@ -1,0 +1,158 @@
+/* ==========================================================================
+   1. LAYOUT RESET & BASE STYLING
+   ========================================================================== */
+body { 
+    background-color: #f8fafc; 
+}
+
+.wrapper-vertikal { 
+    display: flex; 
+    flex-direction: column; 
+    min-height: 100vh; 
+}
+
+/* ==========================================================================
+   2. ATAS: NAVIGASI TOMBOL KEMBALI
+   ========================================================================== */
+.area-kembali {
+    max-width: 1200px; 
+    margin: 20px auto 0 auto; 
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.btn-kembali-link {
+    display: inline-flex; 
+    align-items: center; 
+    gap: 8px; 
+    text-decoration: none; 
+    color: #475569; 
+    background-color: #ffffff; 
+    padding: 8px 14px; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 6px; 
+    font-size: 14px; 
+    font-weight: 600; 
+    transition: all 0.2s ease; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.btn-kembali-link:hover {
+    color: #1e293b; 
+    background-color: #f8fafc;
+}
+
+/* ==========================================================================
+   3. PANEL BANNER MODERATOR INFO
+   ========================================================================== */
+.admin-header-info { 
+    background: #fee2e2; 
+    border: 1px solid #fca5a5; 
+    padding: 15px; 
+    border-radius: 10px; 
+    margin-bottom: 25px; 
+    color: #991b1b; 
+    font-size: 14px; 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+}
+
+.badge-moderator-icon {
+    font-size: 18px;
+}
+
+/* ==========================================================================
+   4. KARTU TOPID DISKUSI & STRUKTUR KONTEN
+   ========================================================================== */
+.card-body-content {
+    width: 100%;
+}
+
+.card-header-flex {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 15px;
+}
+
+.topic-title {
+    margin: 0; 
+    flex: 1;
+}
+
+.topic-snippet {
+    margin-top: 10px;
+}
+
+/* ==========================================================================
+   5. KOMENTAR METADATA & COMPONENT ROW
+   ========================================================================== */
+.comment-bubble {
+    width: 100%;
+}
+
+.comment-meta {
+    display: flex; 
+    align-items: center; 
+    width: 100%;
+}
+
+.comment-date-text {
+    margin-left: 10px; 
+    font-size: 11px; 
+    color: #94a3b8;
+}
+
+.comment-text-content {
+    margin-top: 5px;
+}
+
+.comment-empty {
+    font-size: 13px; 
+    color: #94a3b8; 
+    text-align: center; 
+    padding: 10px 0;
+}
+
+.forum-empty-box {
+    text-align: center; 
+    padding: 40px; 
+    background: white; 
+    border-radius: 12px; 
+    border: 1px solid #e2e8f0; 
+    color: #64748b;
+}
+
+/* ==========================================================================
+   6. TOMBOL AKSI MODERASI (HAPUS DATA)
+   ========================================================================== */
+.btn-moderasi-hapus-post { 
+    background-color: #dc2626; 
+    color: white; 
+    border: none; 
+    padding: 6px 12px; 
+    border-radius: 6px; 
+    font-size: 12px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    text-decoration: none; 
+    transition: background-color 0.2s ease;
+}
+
+.btn-moderasi-hapus-post:hover { 
+    background-color: #b91c1c; 
+}
+
+.btn-moderasi-hapus-komen { 
+    color: #dc2626; 
+    text-decoration: none; 
+    font-weight: 600; 
+    font-size: 11px; 
+    margin-left: auto; 
+}
+
+.btn-moderasi-hapus-komen:hover { 
+    text-decoration: underline; 
+}
