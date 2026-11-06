@@ -163,8 +163,32 @@
   font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+  .header-section {
+    padding: 32px 24px;
+  }
+
+  .hero-banner {
+    padding: 2rem;
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+  }
+
+  .logo-circle {
+    width: 130px;
+    height: 130px;
+  }
+}
+
 /* --- Responsive (Layar HP / Mobile) --- */
-@media (max-width: 768px) {
+@media (max-width: 680px) {
+  .header-section {
+    padding: 24px 16px;
+  }
+
   .hero-banner {
     flex-direction: column;
     text-align: center;

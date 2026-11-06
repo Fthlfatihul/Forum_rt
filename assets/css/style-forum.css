@@ -437,3 +437,69 @@ body.halaman-diskusi-total {
         flex-direction: column;
     }
 }
+
+@media (max-width: 820px) {
+    .forum-container {
+        padding: 0 24px;
+    }
+
+    .forum-main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .card-main-layout {
+        padding: 20px;
+    }
+
+    .comments-list-wrapper {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .forum-container {
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+
+    .forum-main-header {
+        margin-bottom: 20px;
+    }
+
+    .header-titles h2 {
+        font-size: 21px;
+    }
+
+    .btn-buat-diskusi {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .create-topic-card,
+    .card-main-layout {
+        padding: 16px;
+    }
+
+    .topic-header-layout {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .post-actions {
+        white-space: normal;
+    }
+
+    .comment-input-form-row {
+        flex-direction: column;
+    }
+
+    .comments-list-wrapper {
+        padding: 16px;
+    }
+
+    .input-edit-comment {
+        width: 100%;
+    }
+}

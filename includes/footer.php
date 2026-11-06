@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/style-footer.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style-footer.css">
 <footer class="footer-container">
     <div class="footer-brand">
         <div class="footer-logo">RT</div>

@@ -157,3 +157,36 @@ body.halaman-pengumuman-total {
     margin: 0; 
     font-weight: 600;
 }
+
+@media (max-width: 640px) {
+    .pengumuman-container {
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+
+    .pengumuman-header h2 {
+        font-size: 21px;
+    }
+
+    .accordion-title-bar {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .title-meta {
+        min-width: 0;
+    }
+
+    .title-meta h4 {
+        font-size: 15px;
+        overflow-wrap: anywhere;
+    }
+
+    .accordion-content {
+        padding: 16px;
+    }
+
+    .pengumuman-empty-state {
+        padding: 28px 20px;
+    }
+}

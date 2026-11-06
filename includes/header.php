@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/style-header.css">
+<link rel="stylesheet" href="<?= BASE_URL ?>assets/css/style-header.css">
 <section class="header-section">
   <div class="hero-banner">
     <div class="hero-content">

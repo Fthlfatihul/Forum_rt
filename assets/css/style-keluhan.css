@@ -406,4 +406,63 @@ body.halaman-keluhan-total {
         align-items: flex-start;
         gap: 15px;
     }
+
+    .toggle-view-buttons {
+        width: 100%;
+    }
+
+    .tab-btn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 640px) {
+    .keluhan-container {
+        margin: 24px auto;
+        padding: 0 16px;
+    }
+
+    .header-titles h2 {
+        font-size: 21px;
+    }
+
+    .toggle-view-buttons {
+        align-items: stretch;
+    }
+
+    .tab-btn {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .complaint-card {
+        padding: 16px;
+    }
+
+    .card-top-row {
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .meta-left {
+        flex-wrap: wrap;
+    }
+
+    .card-meta-footer {
+        gap: 10px 16px;
+    }
+
+    .form-card-header,
+    .form-card-body {
+        padding: 20px;
+    }
+
+    .form-actions-footer {
+        flex-wrap: wrap;
+    }
+
+    .form-actions-footer > * {
+        flex: 1 1 140px;
+        text-align: center;
+    }
 }

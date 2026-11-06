@@ -63,3 +63,14 @@
         gap: 8px;
     }
 }
+
+@media (max-width: 640px) {
+    .footer-container {
+        padding: 20px 16px;
+    }
+
+    .footer-text p,
+    .footer-copyright p {
+        line-height: 1.5;
+    }
+}
